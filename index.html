@@ -1,106 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Agrinho - Educação e Sustentabilidade</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f9f4;
-        }
-        header {
-            background-color: #2e7d32;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        nav {
-            background-color: #1b5e20;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-        }
-        h2 {
-            color: #2e7d32;
-        }
-        .imagem {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #2e7d32;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrinho - Educação e Sustentabilidade</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f9f4;
+}
+
+/* MENU */
+header {
+    background: #2e7d32;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BANNER */
+.banner {
+    background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner h2 {
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* CONTEÚDO */
+section {
+    padding: 30px;
+}
+
+h2 {
+    color: #2e7d32;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* GALERIA */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.galeria img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* RODAPÉ */
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>🌱 Programa Agrinho</h1>
-    <p>Educação, Sustentabilidade e Cidadania</p>
+    <h1>🌱 Agrinho</h1>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#importancia">Importância</a>
+        <a href="#sustentabilidade">Sustentabilidade</a>
+        <a href="#campo">Campo e Cidade</a>
+        <a href="#galeria">Galeria</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#importancia">Importância</a>
-    <a href="#sustentabilidade">Sustentabilidade</a>
-    <a href="#campo">Campo e Cidade</a>
-</nav>
+<div class="banner">
+    <h2>Educação que transforma o futuro 🌍</h2>
+</div>
 
 <section id="sobre">
     <h2>O que é o Agrinho?</h2>
     <p>
-        O Agrinho é um programa educacional que busca ensinar crianças e jovens sobre cidadania,
-        meio ambiente, sustentabilidade e a importância do campo para a vida de todos.
-        Ele é desenvolvido em escolas e incentiva o aprendizado através de projetos, textos e atividades.
+        O Agrinho é um programa educacional que promove a conscientização sobre temas como
+        meio ambiente, cidadania, ética, saúde e sustentabilidade. Ele é desenvolvido em escolas
+        e tem como objetivo formar alunos mais conscientes e responsáveis.
     </p>
-    <img class="imagem" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Plantação">
+    <p>
+        Através de atividades, redações e projetos, os estudantes aprendem a importância de cuidar
+        do planeta e de viver em sociedade de forma respeitosa e sustentável.
+    </p>
 </section>
 
 <section id="importancia">
     <h2>Importância do Agrinho</h2>
-    <p>
-        O Agrinho é importante porque ajuda os alunos a entenderem o valor da natureza,
-        da agricultura e da preservação ambiental. Ele também incentiva atitudes responsáveis
-        no dia a dia, como economizar água, reciclar e cuidar do planeta.
-    </p>
-    <img class="imagem" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="Agricultura">
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+            <p>
+                O Agrinho ensina o valor da agricultura e mostra como os alimentos chegam até nossa casa.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+            <p>
+                Incentiva atitudes responsáveis como reciclagem, economia de água e respeito ao meio ambiente.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
+            <p>
+                Ajuda a formar cidadãos conscientes, preparados para cuidar do futuro do planeta.
+            </p>
+        </div>
+
+    </div>
 </section>
 
 <section id="sustentabilidade">
     <h2>Sustentabilidade</h2>
     <p>
-        A sustentabilidade é um dos principais temas do Agrinho. Ela significa usar os recursos
-        naturais sem prejudicar o futuro. Isso inclui cuidar da água, do solo, das plantas e dos animais.
+        Sustentabilidade significa usar os recursos naturais de forma consciente, sem prejudicar
+        as próximas gerações. Isso envolve cuidar da água, preservar florestas e reduzir a poluição.
     </p>
-    <img class="imagem" src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e" alt="Natureza">
+    <p>
+        O Agrinho incentiva práticas sustentáveis como:
+    </p>
+    <ul>
+        <li>Economizar água</li>
+        <li>Reciclar lixo</li>
+        <li>Evitar desperdícios</li>
+        <li>Proteger a natureza</li>
+    </ul>
 </section>
 
 <section id="campo">
     <h2>Relação entre Campo e Cidade</h2>
     <p>
-        O campo e a cidade estão conectados. O campo produz alimentos que chegam até a cidade,
-        e a cidade oferece tecnologia e serviços. O Agrinho ensina que essa relação deve ser
-        equilibrada e sustentável.
+        O campo e a cidade dependem um do outro. O campo produz alimentos, enquanto a cidade oferece
+        tecnologia e serviços. Essa conexão é essencial para a vida de todos.
     </p>
-    <img class="imagem" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef" alt="Campo e cidade">
+    <p>
+        O Agrinho mostra que é importante manter esse equilíbrio para garantir qualidade de vida
+        e desenvolvimento sustentável.
+    </p>
+</section>
+
+<section id="galeria">
+    <h2>Galeria de Imagens</h2>
+
+    <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+    </div>
+
 </section>
 
 <footer>
-    <p>Projeto escolar - Agrinho 🌱</p>
+    <p>🌱 Projeto Agrinho</p>
+    <p>Aluno: Seu Nome | Escola: Sua Escola</p>
 </footer>
 
 </body>
