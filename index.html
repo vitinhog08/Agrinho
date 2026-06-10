@@ -1,166 +1,180 @@
-export default function AgroPremiumSite() {
-  return (
-    <div className="bg-[#121212] text-white font-sans min-h-screen">
-      {/* HERO */}
-      <section
-        className="h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format&fit=crop')",
-        }}
-      >
-        <div className="bg-black/60 p-10 rounded-3xl max-w-3xl backdrop-blur-sm shadow-2xl">
-          <h1 className="text-6xl md:text-8xl font-bold text-[#C9A227] mb-6">
-            O FUTURO DO AGRO
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
-            Tecnologia, sustentabilidade e inovação conectando o campo e a cidade.
-          </p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrinho - Educação e Cidadania</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f8f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #388E3C;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #C8E6C9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #2E7D32;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      flex: 1 1 calc(33% - 40px);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        flex-direction: column;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Agrinho</h1>
+    <p>Educação, Cidadania e Meio Ambiente</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#atividades">Atividades</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="container">
+    <section id="sobre">
+      <h2>Sobre o Agrinho</h2>
+      <p>O Agrinho é um programa educativo promovido para estimular valores de cidadania, ética e cuidado com o meio
+        ambiente entre crianças e adolescentes. Por meio de atividades lúdicas, concursos e projetos escolares, os
+        alunos aprendem a importância de atitudes responsáveis no dia a dia.</p>
+    </section>
+
+    <section id="objetivos">
+      <h2>Objetivos</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Formar Cidadãos Conscientes</h3>
+          <p>Incentivar práticas de responsabilidade social e ética entre os alunos.</p>
         </div>
-      </section>
-
-      {/* SOBRE */}
-      <section className="py-24 px-6 bg-[#1E3A2F]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-          <img
-            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop"
-            className="rounded-3xl shadow-2xl"
-          />
-
-          <div>
-            <h2 className="text-5xl font-bold text-[#C9A227] mb-8">
-              Sobre o Agrinho
-            </h2>
-            <p className="text-lg leading-9 text-gray-200">
-              O Programa Agrinho promove educação, cidadania e sustentabilidade,
-              incentivando estudantes a refletirem sobre a importância do
-              agronegócio e da preservação ambiental.
-            </p>
-
-            <p className="text-lg leading-9 text-gray-300 mt-6">
-              O futuro do agro depende da união entre tecnologia, inovação e
-              responsabilidade ambiental.
-            </p>
-          </div>
+        <div class="card">
+          <h3>Educação Ambiental</h3>
+          <p>Promover ações de preservação do meio ambiente dentro e fora da escola.</p>
         </div>
-      </section>
-
-      {/* TECNOLOGIA */}
-      <section className="py-24 px-6 bg-[#121212]">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl font-bold text-[#C9A227] mb-16">
-            Tecnologia no Campo
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-[#1B1B1B] rounded-3xl overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop"
-                className="h-64 w-full object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-[#C9A227]">
-                  Drones Agrícolas
-                </h3>
-                <p className="text-gray-300 leading-8">
-                  Monitoramento inteligente das lavouras com precisão e rapidez.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-[#1B1B1B] rounded-3xl overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2070&auto=format&fit=crop"
-                className="h-64 w-full object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-[#C9A227]">
-                  Inteligência Artificial
-                </h3>
-                <p className="text-gray-300 leading-8">
-                  Sistemas modernos ajudam a economizar água e aumentar a produção.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-[#1B1B1B] rounded-3xl overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?q=80&w=2070&auto=format&fit=crop"
-                className="h-64 w-full object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-[#C9A227]">
-                  Máquinas Modernas
-                </h3>
-                <p className="text-gray-300 leading-8">
-                  Equipamentos inteligentes aumentam a eficiência no campo.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="card">
+          <h3>Desenvolvimento de Habilidades</h3>
+          <p>Estimular criatividade, trabalho em equipe e senso crítico nos estudantes.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* SUSTENTABILIDADE */}
-      <section className="py-24 px-6 bg-[#1E3A2F] text-center">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-bold text-[#C9A227] mb-10">
-            Sustentabilidade
-          </h2>
+    <section id="atividades">
+      <h2>Atividades</h2>
+      <ul>
+        <li>Concursos de redação e desenho sobre cidadania e meio ambiente.</li>
+        <li>Projetos escolares de sustentabilidade.</li>
+        <li>Palestras educativas e workshops.</li>
+        <li>Campanhas de conscientização ambiental.</li>
+      </ul>
+    </section>
 
-          <p className="text-xl leading-10 text-gray-200 mb-10">
-            Produzir sem destruir é o maior desafio do agro moderno.
-            Tecnologia e natureza podem caminhar juntas para garantir alimentos
-            e preservar o planeta.
-          </p>
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Para mais informações sobre o Agrinho, entre em contato conosco:</p>
+      <form>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
 
-          <img
-            src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=2070&auto=format&fit=crop"
-            className="rounded-3xl shadow-2xl mx-auto"
-          />
-        </div>
-      </section>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-      {/* CAMPO E CIDADE */}
-      <section className="py-24 px-6 bg-[#121212]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-          <div>
-            <h2 className="text-5xl font-bold text-[#C9A227] mb-8">
-              Campo e Cidade
-            </h2>
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
 
-            <p className="text-lg leading-9 text-gray-300">
-              O campo produz alimentos, enquanto a cidade oferece tecnologia,
-              pesquisa e inovação.
-            </p>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
 
-            <p className="text-lg leading-9 text-gray-300 mt-6">
-              Essa conexão fortalece a economia e melhora a qualidade de vida da população.
-            </p>
-          </div>
+  <footer>
+    <p>&copy; 2026 Agrinho. Todos os direitos reservados.</p>
+  </footer>
 
-          <img
-            src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2070&auto=format&fit=crop"
-            className="rounded-3xl shadow-2xl"
-          />
-        </div>
-      </section>
+</body>
 
-      {/* FINAL */}
-      <section className="py-32 px-6 text-center bg-gradient-to-b from-[#1E3A2F] to-[#121212]">
-        <h2 className="text-6xl font-bold text-[#C9A227] mb-10">
-          O Amanhã Começa Hoje
-        </h2>
-
-        <p className="text-xl max-w-4xl mx-auto leading-10 text-gray-300 mb-16">
-          O futuro da agricultura será inteligente, sustentável e conectado.
-          Os jovens terão papel fundamental nessa transformação.
-        </p>
-
-        <div className="border border-[#C9A227] inline-block px-10 py-5 rounded-full text-[#C9A227] text-xl font-semibold">
-          Projeto Agrinho 2026
-        </div>
-      </section>
-    </div>
-  );
-}
+</html>
