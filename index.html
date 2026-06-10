@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agrinho - Construindo um Futuro Sustentável</title>
+<title>Agrinho - Portal Completo</title>
 
 <style>
 body {
@@ -19,87 +19,54 @@ header {
     padding: 15px;
     position: sticky;
     top: 0;
-    z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
+nav button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-nav {
+nav button:hover {
+    background: #388e3c;
+}
+
+/* CONTEÚDO */
+main {
+    padding: 30px;
+}
+
+/* PÁGINAS */
+.pagina {
+    display: none;
+    animation: fade 0.5s;
+}
+
+.ativa {
+    display: block;
+}
+
+/* ANIMAÇÃO */
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* IMAGENS */
+img {
+    width: 300px;
+    border-radius: 10px;
     margin-top: 10px;
 }
 
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* BANNER */
-.banner {
-    background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner h2 {
-    color: white;
-    background: rgba(0,0,0,0.6);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* SEÇÕES */
-section {
-    padding: 40px;
-}
-
-h2 {
-    color: #2e7d32;
-}
-
-/* CARDS */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* LISTA */
-ul {
-    line-height: 1.8;
-}
-
-/* GALERIA */
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.galeria img {
-    width: 250px;
-    border-radius: 10px;
+/* QUIZ */
+.quiz button {
+    display: block;
+    margin: 10px 0;
 }
 
 /* RODAPÉ */
@@ -107,7 +74,7 @@ footer {
     background: #1b5e20;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }
 </style>
 </head>
@@ -115,128 +82,104 @@ footer {
 <body>
 
 <header>
-    <h1>🌱 Programa Agrinho</h1>
+    <h1>🌱 Agrinho - Portal Educativo</h1>
     <nav>
-        <a href="#introducao">Introdução</a>
-        <a href="#objetivos">Objetivos</a>
-        <a href="#importancia">Importância</a>
-        <a href="#sustentabilidade">Sustentabilidade</a>
-        <a href="#campo">Campo e Cidade</a>
-        <a href="#conclusao">Conclusão</a>
+        <button onclick="trocarPagina('home')">Início</button>
+        <button onclick="trocarPagina('agro')">Agronegócio</button>
+        <button onclick="trocarPagina('sustentabilidade')">Sustentabilidade</button>
+        <button onclick="trocarPagina('campo')">Campo e Cidade</button>
+        <button onclick="trocarPagina('quiz')">Quiz</button>
     </nav>
 </header>
 
-<div class="banner">
-    <h2>Educação para um mundo melhor 🌍</h2>
+<main>
+
+<!-- HOME -->
+<div id="home" class="pagina ativa">
+    <h2>Bem-vindo</h2>
+    <p>
+        Este site apresenta o programa Agrinho, destacando a importância da educação,
+        sustentabilidade e do agronegócio.
+    </p>
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+    <p><i>Plantação representando a produção agrícola.</i></p>
 </div>
 
-<section id="introducao">
-    <h2>Introdução</h2>
+<!-- AGRO -->
+<div id="agro" class="pagina">
+    <h2>O que é o Agronegócio?</h2>
     <p>
-        O Agrinho é um dos maiores programas educacionais do Brasil, voltado para a formação
-        de crianças e jovens conscientes sobre cidadania, meio ambiente e sustentabilidade.
+        O agronegócio envolve todas as atividades relacionadas à produção de alimentos,
+        desde o plantio até a venda.
     </p>
     <p>
-        Ele busca desenvolver valores importantes como responsabilidade, respeito à natureza
-        e compromisso com o futuro do planeta.
+        Ele é essencial para a economia e para a alimentação da população.
     </p>
-</section>
+    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+    <p><i>Produção agrícola no campo.</i></p>
+</div>
 
-<section id="objetivos">
-    <h2>Objetivos do Programa</h2>
-
-    <div class="container">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
-            <p><b>Educação ambiental:</b> ensinar a importância da preservação da natureza.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
-            <p><b>Consciência social:</b> formar cidadãos responsáveis.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-            <p><b>Integração:</b> mostrar a relação entre campo e cidade.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="importancia">
-    <h2>Importância do Agrinho</h2>
-    <p>
-        O programa Agrinho é fundamental para a sociedade porque ajuda a construir uma geração
-        mais consciente. Ele ensina que pequenas atitudes podem fazer grande diferença.
-    </p>
-
-    <ul>
-        <li>Redução da poluição</li>
-        <li>Uso consciente da água</li>
-        <li>Valorização da agricultura</li>
-        <li>Respeito ao meio ambiente</li>
-    </ul>
-</section>
-
-<section id="sustentabilidade">
+<!-- SUSTENTABILIDADE -->
+<div id="sustentabilidade" class="pagina">
     <h2>Sustentabilidade</h2>
     <p>
-        Sustentabilidade significa atender às necessidades do presente sem comprometer o futuro.
-        Esse conceito é essencial para garantir qualidade de vida para todos.
+        Sustentabilidade é cuidar dos recursos naturais para o futuro.
     </p>
-
-    <p><b>Exemplos de práticas sustentáveis:</b></p>
     <ul>
-        <li>Reciclagem de materiais</li>
-        <li>Economia de água e energia</li>
-        <li>Preservação das florestas</li>
-        <li>Uso de energias renováveis</li>
+        <li>Economizar água</li>
+        <li>Reciclar</li>
+        <li>Preservar a natureza</li>
     </ul>
-</section>
+    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
+    <p><i>Ambiente natural preservado.</i></p>
+</div>
 
-<section id="campo">
-    <h2>Relação entre Campo e Cidade</h2>
+<!-- CAMPO -->
+<div id="campo" class="pagina">
+    <h2>Campo e Cidade</h2>
     <p>
-        O campo produz alimentos e matérias-primas, enquanto a cidade oferece tecnologia,
-        comércio e serviços. Essa relação é essencial para o funcionamento da sociedade.
+        O campo produz alimentos e a cidade fornece tecnologia.
     </p>
-    <p>
-        O Agrinho ensina que devemos valorizar o produtor rural e manter um equilíbrio sustentável
-        entre esses dois espaços.
-    </p>
-</section>
+    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+    <p><i>Integração entre campo e cidade.</i></p>
+</div>
 
-<section id="conclusao">
-    <h2>Conclusão</h2>
-    <p>
-        O Agrinho é muito importante para a educação, pois ajuda a formar cidadãos mais conscientes
-        e responsáveis. Ele mostra que todos nós temos um papel na construção de um mundo melhor.
-    </p>
-    <p>
-        Com atitudes simples, podemos contribuir para preservar o meio ambiente e garantir um
-        futuro sustentável para as próximas gerações.
-    </p>
-</section>
+<!-- QUIZ -->
+<div id="quiz" class="pagina quiz">
+    <h2>Quiz sobre Agrinho</h2>
+    <p>O que é sustentabilidade?</p>
 
-<section>
-    <h2>Galeria</h2>
-    <div class="galeria">
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
-        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
-        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
-        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-    </div>
-</section>
+    <button onclick="resposta(true)">Uso consciente dos recursos naturais</button>
+    <button onclick="resposta(false)">Gastar tudo sem pensar no futuro</button>
+
+    <p id="resultado"></p>
+</div>
+
+</main>
 
 <footer>
     <p>🌱 Projeto Agrinho</p>
     <p>Aluno: Vitor Gabriel</p>
     <p>Escola: Olavo Bilac</p>
-    <p>Professor: Gilmar Horchulhak</p>
 </footer>
+
+<script>
+function trocarPagina(id) {
+    let paginas = document.querySelectorAll('.pagina');
+    paginas.forEach(p => p.classList.remove('ativa'));
+    document.getElementById(id).classList.add('ativa');
+}
+
+function resposta(correta) {
+    let resultado = document.getElementById("resultado");
+
+    if (correta) {
+        resultado.innerHTML = "✅ Resposta correta!";
+    } else {
+        resultado.innerHTML = "❌ Resposta errada!";
+    }
+}
+</script>
 
 </body>
 </html>
